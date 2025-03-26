@@ -1,0 +1,335 @@
+Enter password: ************
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 46
+Server version: 8.0.41 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2025, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> USE mydb
+Database changed
+mysql> SHOW TABLES;
++----------------------+
+| Tables_in_mydb       |
++----------------------+
+| advisors             |
+| attendance           |
+| courses              |
+| department           |
+| enrollments          |
+| grades               |
+| instructors          |
+| location             |
+| majors               |
+| prerequisites        |
+| programs             |
+| registration         |
+| sections             |
+| student_transactions |
+| students             |
+| terms                |
++----------------------+
+16 rows in set (0.01 sec)
+
+mysql> SELECT studentID, ACTscore FROM mydb.students;
++-----------+----------+
+| studentID | ACTscore |
++-----------+----------+
+|       441 |       31 |
+|       442 |       22 |
+|       443 |       19 |
+|       444 |       35 |
+|       445 |       25 |
++-----------+----------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT studentID, ACTscore FROM mydb.students;
++-----------+----------+
+| studentID | ACTscore |
++-----------+----------+
+|       441 |       31 |
+|       442 |       22 |
+|       443 |       19 |
+|       444 |       35 |
+|       445 |       25 |
++-----------+----------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT courseID, sectionID, maxEnrolled FROM mydb.enrollments;
++----------+-----------+-------------+
+| courseID | sectionID | maxEnrolled |
++----------+-----------+-------------+
+|      221 |       331 |          50 |
+|      222 |       332 |          45 |
+|      223 |       333 |          45 |
+|      224 |       334 |          50 |
+|      225 |       335 |          45 |
++----------+-----------+-------------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT studentID, ACTscore FROM mydb.students;
++-----------+----------+
+| studentID | ACTscore |
++-----------+----------+
+|       441 |       31 |
+|       442 |       22 |
+|       443 |       19 |
+|       444 |       35 |
+|       445 |       25 |
++-----------+----------+
+5 rows in set (0.00 sec)
+
+
+mysql> SELECT courseID, sectionID, maxEnrolled FROM mydb.enrollments;
++----------+-----------+-------------+
+| courseID | sectionID | maxEnrolled |
++----------+-----------+-------------+
+|      221 |       331 |          50 |
+|      222 |       332 |          45 |
+|      223 |       333 |          45 |
+|      224 |       334 |          50 |
+|      225 |       335 |          45 |
++----------+-----------+-------------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT studentID, amountPaid FROM mydb.student_transactions;
++-----------+------------+
+| studentID | amountPaid |
++-----------+------------+
+|       441 |      80.25 |
+|       442 |      75.75 |
+|       443 |      50.25 |
+|       444 |      90.95 |
+|       445 |      25.25 |
++-----------+------------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT studentID, ACTscore FROM mydb.students;
++-----------+----------+
+| studentID | ACTscore |
++-----------+----------+
+|       441 |       31 |
+|       442 |       22 |
+|       443 |       19 |
+|       444 |       35 |
+|       445 |       25 |
++-----------+----------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT courseID, sectionID, maxEnrolled FROM mydb.enrollments;
++----------+-----------+-------------+
+| courseID | sectionID | maxEnrolled |
++----------+-----------+-------------+
+|      221 |       331 |          50 |
+|      222 |       332 |          45 |
+|      223 |       333 |          45 |
+|      224 |       334 |          50 |
+|      225 |       335 |          45 |
++----------+-----------+-------------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT studentID, amountPaid FROM mydb.student_transactions;
++-----------+------------+
+| studentID | amountPaid |
++-----------+------------+
+|       441 |      80.25 |
+|       442 |      75.75 |
+|       443 |      50.25 |
+|       444 |      90.95 |
+|       445 |      25.25 |
++-----------+------------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * FROM mydb.grades WHERE letterGrade = "A";
++----------+-----------+-------------+
+| courseID | studentID | letterGrade |
++----------+-----------+-------------+
+|      221 |       441 | A           |
+|      222 |       442 | A           |
+|      224 |       444 | A           |
++----------+-----------+-------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT studentID, ACTscore FROM mydb.students;
++-----------+----------+
+| studentID | ACTscore |
++-----------+----------+
+|       441 |       31 |
+|       442 |       22 |
+|       443 |       19 |
+|       444 |       35 |
+|       445 |       25 |
++-----------+----------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT courseID, sectionID, maxEnrolled FROM mydb.enrollments;
++----------+-----------+-------------+
+| courseID | sectionID | maxEnrolled |
++----------+-----------+-------------+
+|      221 |       331 |          50 |
+|      222 |       332 |          45 |
+|      223 |       333 |          45 |
+|      224 |       334 |          50 |
+|      225 |       335 |          45 |
++----------+-----------+-------------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT studentID, amountPaid FROM mydb.student_transactions;
++-----------+------------+
+| studentID | amountPaid |
++-----------+------------+
+|       441 |      80.25 |
+|       442 |      75.75 |
+|       443 |      50.25 |
+|       444 |      90.95 |
+|       445 |      25.25 |
++-----------+------------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * FROM mydb.grades WHERE letterGrade = "A";
++----------+-----------+-------------+
+| courseID | studentID | letterGrade |
++----------+-----------+-------------+
+|      221 |       441 | A           |
+|      222 |       442 | A           |
+|      224 |       444 | A           |
++----------+-----------+-------------+
+3 rows in set (0.00 sec)
+
+Empty set (0.00 sec)
+
+mysql> SELECT * FROM mydb.sections WHERE capacity < "70";
++-----------+----------+--------+------------+-----------+----------+----------+
+| sectionID | courseID | termID | startDay   | startTime | endTime  | capacity |
++-----------+----------+--------+------------+-----------+----------+----------+
+|       331 |      221 |   5123 | 2023-08-21 | 08:30:00  | 09:30:00 |       60 |
+|       332 |      222 |   5124 | 2023-08-21 | 09:45:00  | 10:45:00 |       60 |
+|       333 |      223 |   5125 | 2023-08-21 | 13:00:00  | 14:00:00 |       60 |
+|       334 |      224 |   5126 | 2023-08-21 | 13:15:00  | 14:15:00 |       60 |
+|       335 |      225 |   5127 | 2023-08-21 | 14:00:00  | 15:00:00 |       60 |
++-----------+----------+--------+------------+-----------+----------+----------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT courseID, sectionID, maxEnrolled FROM mydb.enrollments;
++----------+-----------+-------------+
+| courseID | sectionID | maxEnrolled |
++----------+-----------+-------------+
+|      221 |       331 |          50 |
+|      222 |       332 |          45 |
+|      223 |       333 |          45 |
+|      224 |       334 |          50 |
+|      225 |       335 |          45 |
++----------+-----------+-------------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT studentID, amountPaid FROM mydb.student_transactions;
++-----------+------------+
+| studentID | amountPaid |
++-----------+------------+
+|       441 |      80.25 |
+|       442 |      75.75 |
+|       443 |      50.25 |
+|       444 |      90.95 |
+|       445 |      25.25 |
++-----------+------------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * FROM mydb.grades WHERE letterGrade = "A";
++----------+-----------+-------------+
+| courseID | studentID | letterGrade |
++----------+-----------+-------------+
+|      221 |       441 | A           |
+|      222 |       442 | A           |
+|      224 |       444 | A           |
++----------+-----------+-------------+
+3 rows in set (0.00 sec)
+
+mysql> SELECT * FROM mydb.sections WHERE capacity > "80";
+Empty set (0.00 sec)
+
+mysql> SELECT * FROM mydb.sections WHERE capacity < "80";
++-----------+----------+--------+------------+-----------+----------+----------+
+| sectionID | courseID | termID | startDay   | startTime | endTime  | capacity |
++-----------+----------+--------+------------+-----------+----------+----------+
+|       331 |      221 |   5123 | 2023-08-21 | 08:30:00  | 09:30:00 |       60 |
+|       332 |      222 |   5124 | 2023-08-21 | 09:45:00  | 10:45:00 |       60 |
+|       333 |      223 |   5125 | 2023-08-21 | 13:00:00  | 14:00:00 |       60 |
+|       334 |      224 |   5126 | 2023-08-21 | 13:15:00  | 14:15:00 |       60 |
+|       335 |      225 |   5127 | 2023-08-21 | 14:00:00  | 15:00:00 |       60 |
++-----------+----------+--------+------------+-----------+----------+----------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * FROM mydb.student_transactions WHERE amountPaid < "95.00";
++---------------+-----------+------------+------------+--------+
+| transactionID | studentID | postDate   | amountPaid | termID |
++---------------+-----------+------------+------------+--------+
+|            11 |       441 | 2023-05-01 |      80.25 |   5123 |
+|            22 |       442 | 2023-05-01 |      75.75 |   5124 |
+|            33 |       443 | 2023-05-01 |      50.25 |   5125 |
+|            44 |       444 | 2023-05-01 |      90.95 |   5126 |
+|            55 |       445 | 2023-05-01 |      25.25 |   5127 |
++---------------+-----------+------------+------------+--------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT studentID, amountPaid FROM mydb.student_transactions;
++-----------+------------+
+| studentID | amountPaid |
++-----------+------------+
+|       441 |      80.25 |
+|       442 |      75.75 |
+|       443 |      50.25 |
+|       444 |      90.95 |
+|       445 |      25.25 |
++-----------+------------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * FROM mydb.grades WHERE letterGrade = "B";
++----------+-----------+-------------+
+| courseID | studentID | letterGrade |
++----------+-----------+-------------+
+|      223 |       443 | B           |
++----------+-----------+-------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT *  FROM mydb.sections WHERE capacity > "21";
++-----------+----------+--------+------------+-----------+----------+----------+
+| sectionID | courseID | termID | startDay   | startTime | endTime  | capacity |
++-----------+----------+--------+------------+-----------+----------+----------+
+|       331 |      221 |   5123 | 2023-08-21 | 08:30:00  | 09:30:00 |       60 |
+|       332 |      222 |   5124 | 2023-08-21 | 09:45:00  | 10:45:00 |       60 |
+|       333 |      223 |   5125 | 2023-08-21 | 13:00:00  | 14:00:00 |       60 |
+|       334 |      224 |   5126 | 2023-08-21 | 13:15:00  | 14:15:00 |       60 |
+|       335 |      225 |   5127 | 2023-08-21 | 14:00:00  | 15:00:00 |       60 |
++-----------+----------+--------+------------+-----------+----------+----------+
+5 rows in set (0.00 sec)
+
+mysql> SELECT * FROM mydb.student_transactions WHERE amountPaid > "85.00";
++---------------+-----------+------------+------------+--------+
+| transactionID | studentID | postDate   | amountPaid | termID |
++---------------+-----------+------------+------------+--------+
+|            44 |       444 | 2023-05-01 |      90.95 |   5126 |
++---------------+-----------+------------+------------+--------+
+1 row in set (0.00 sec)
+
+mysql> SELECT * From mydb.programs WHERE programName = "AdvancedChemistry";
++-----------+-------------------+
+| programID | programName       |
++-----------+-------------------+
+|      8885 | AdvancedChemistry |
++-----------+-------------------+
+1 row in set (0.00 sec)
+
+mysql> SELECT SUM(amountPaid) AS total FROM mydb.student_transactions;
++--------+
+| total  |
++--------+
+| 322.45 |
++--------+
+1 row in set (0.01 sec)
+
+mysql>
